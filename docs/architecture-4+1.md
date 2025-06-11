@@ -6,7 +6,7 @@ La vue logique représente les classes principales et leurs relations dans l'arc
 
 ### Diagramme de classes
 
-![Diagramme de Classes](uml/classes.png)
+![Diagramme de Classes](uml/images/classes.png)
 
 ### Évolution du modèle (Lab 1 → Lab 2)
 
@@ -52,15 +52,15 @@ La vue logique représente les classes principales et leurs relations dans l'arc
 
 #### UC1 - Génération de rapport consolidé (Console)
 
-![Diagramme de Séquence - Rapport](uml/sequence_rapport.png)
+![Diagramme de Séquence - Rapport](uml/images/sequence_rapport.png)
 
 #### UC3 - Tableau de bord supervision (Web)
 
-![Diagramme de Séquence - Tableau de Bord](uml/sequence_tableau_bord.png)
+![Diagramme de Séquence - Tableau de Bord](uml/images/sequence_tableau_bord.png)
 
 #### Processus de vente multi-magasins
 
-![Diagramme de Séquence - Vente](uml/sequence_vente.png)
+![Diagramme de Séquence - Vente](uml/images/sequence_vente.png)
 
 ### Processus principaux
 
@@ -73,7 +73,7 @@ La vue logique représente les classes principales et leurs relations dans l'arc
 
 La vue de déploiement montre l'architecture 3-tier distribuée pour le système multi-magasins.
 
-![Diagramme de Déploiement](uml/deploiement.png)
+![Diagramme de Déploiement](uml/images/deploiement.png)
 
 ### Architecture 3-tier distribuée
 
@@ -122,7 +122,7 @@ La vue de déploiement montre l'architecture 3-tier distribuée pour le système
 
 La vue d'implémentation montre l'organisation du code avec l'architecture MVC.
 
-![Diagramme de Composants](uml/composants.png)
+![Diagramme de Composants](uml/images/composants.png)
 
 ### Organisation des modules
 
@@ -166,7 +166,7 @@ La vue des cas d'utilisation décrit les scénarios du système multi-magasins.
 
 ### Cas d'utilisation principaux
 
-![Diagramme des Cas d'Utilisation](uml/cas_utilisation.png)
+![Diagramme des Cas d'Utilisation](uml/images/cas_utilisation.png)
 
 ### Acteurs et cas d'utilisation
 
