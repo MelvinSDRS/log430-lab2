@@ -94,13 +94,6 @@ Le système évolue d'un environnement mono-magasin (Lab 1) vers un écosystème
 - **UC7** : Détection des ruptures critiques
 - **UC8** : Interface web minimale pour supervision
 
-### 3.3 Contraintes non-fonctionnelles
-
-- **Performance** : Support de transactions simultanées
-- **Disponibilité** : 99% uptime
-- **Évolutivité** : Ajout facile de nouveaux magasins
-- **Maintenabilité** : Code modulaire et documenté
-
 ---
 
 ## 4. Stratégie de solution
@@ -154,6 +147,9 @@ src/
     └── templates/   # Templates HTML légers
 ```
 
+![deploiement](uml/images/deploiement.png)
+
+
 ### 5.2 Services métier
 
 **Services réutilisés (Lab 1)** :
@@ -166,6 +162,9 @@ src/
 - ServiceApprovisionnement : Demandes et transferts
 - ServiceRapport : Rapports consolidés
 - ServiceTableauBord : Indicateurs supervision
+
+### 5.3 Vue composants
+![composants](uml/images/composants.png)
 
 ---
 
@@ -192,11 +191,36 @@ src/
 3. Validation demande (centre logistique)
 4. Transfert stock et mise à jour
 
-### 6.2 Gestion des sessions
+### 6.2 Scénarios cas d'utilisation
 
-- Variables d'environnement pour identification entité (`ENTITE_ID`)
-- Sessions base de données avec gestion transactionnelle
-- Isolation des données par magasin dans l'interface console
+#### UC1 - Génération de rapport consolidé (Console)
+
+![Diagramme de Séquence - Rapport](uml/images/sequence_rapport.png)
+
+#### UC3 - Tableau de bord supervision (Web)
+
+![Diagramme de Séquence - Tableau de Bord](uml/images/sequence_tableau_bord.png)
+
+#### Recherche d'un produit
+
+![Diagramme de Séquence - Recherche](uml/images/sequence_recherche.png)
+
+#### Retour d'un produit
+
+![Diagramme de Séquence - Retour](uml/images/sequence_retour.png)
+
+#### Processus de vente multi-magasins
+
+![Diagramme de Séquence - Vente](uml/images/sequence_vente.png)
+
+### 6.3 Cas d'utilisation métier
+
+![Diagramme de cas d'utilisation](uml/images/cas_utilisation.png)
+
+**3 acteurs principaux :**
+- Employé Magasin : 4 cas d'usage (ventes, retours, consulter stock, recherche)
+- Responsable Logistique : 1 cas d'usage (traiter approvisionnement)
+- Gestionnaire Maison Mère : 4 cas d'usage (gestion produits, rapports, tableau de bord, supervision)
 
 ---
 
@@ -217,12 +241,7 @@ services:
   pos-web:           # Interface web supervision (Port 5000)
 ```
 
-### 7.2 Configuration par entité
-
-Chaque conteneur reçoit son `ENTITE_ID` permettant :
-- Filtrage automatique des caisses par magasin
-- Adaptation de l'interface selon le type d'entité
-- Isolation des données opérationnelles
+![Diagramme de déploiement](uml/images/deploiement.png)
 
 ---
 
