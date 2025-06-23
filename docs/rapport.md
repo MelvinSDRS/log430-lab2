@@ -150,7 +150,12 @@ src/
 ![deploiement](uml/images/deploiement.png)
 
 
-### 5.2 Services métier
+### 5.2 Diagramme de classes
+
+![classes](uml/images/classes.png)
+
+
+### 5.3 Services métier
 
 **Services réutilisés (Lab 1)** :
 - ServiceProduit : Recherche multi-magasins
@@ -163,7 +168,7 @@ src/
 - ServiceRapport : Rapports consolidés
 - ServiceTableauBord : Indicateurs supervision
 
-### 5.3 Vue composants
+### 5.4 Vue composants
 ![composants](uml/images/composants.png)
 
 ---
